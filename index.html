@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vyankatesh Pharmaceuticals</title>
+
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
+
+iframe{
+    width:100%;
+    border:none;
+    display:block;
+}
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<iframe id="homeFrame" src="home.html"></iframe>
+
+<!-- SECTIONS -->
+<iframe id="aboutFrame" src="about.html"></iframe>
+<iframe id="servicesFrame" src="services.html"></iframe>
+<iframe id="galleryFrame" src="gallery.html"></iframe>
+<iframe id="partnersFrame" src="partners.html"></iframe>
+<iframe id="faqFrame" src="faq.html"></iframe>
+<iframe id="contactFrame" src="contact.html"></iframe>
+
+<script>
+const frames = [
+    { id: "homeFrame", file: "home.html", hideHeader:false },
+    { id: "aboutFrame", file: "about.html", hideHeader:true },
+    { id: "servicesFrame", file: "services.html", hideHeader:true },
+    { id: "galleryFrame", file: "gallery.html", hideHeader:true },
+    { id: "partnersFrame", file: "partners.html", hideHeader:true },
+    { id: "faqFrame", file: "faq.html", hideHeader:true },
+    { id: "contactFrame", file: "contact.html", hideHeader:true }
+];
+
+frames.forEach(item => {
+
+    const iframe = document.getElementById(item.id);
+
+    iframe.addEventListener("load", () => {
+
+        const doc = iframe.contentWindow.document;
+
+        /* hide header for all except home */
+        if(item.hideHeader){
+            const header = doc.querySelector("header");
+            if(header){
+                header.style.display = "none";
+            }
+        }
+
+        /* auto height */
+        setTimeout(() => {
+            iframe.style.height = doc.body.scrollHeight + "px";
+        }, 50);
+
+        /* intercept header links only in the HOME header */
+        if(item.id === "homeFrame"){
+            setupMenuLinks(doc);
+        }
+
+    });
+
+});
+
+
+function setupMenuLinks(doc){
+
+    const map = {
+        "home.html"     : "homeFrame",
+        "about.html"    : "aboutFrame",
+        "services.html" : "servicesFrame",
+        "gallery.html"  : "galleryFrame",
+        "partners.html" : "partnersFrame",
+        "faq.html"      : "faqFrame",
+        "contact.html"  : "contactFrame"
+    };
+
+    const links = doc.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if(map[href]){
+
+            link.addEventListener("click", function(e){
+
+                e.preventDefault();
+
+                const targetFrame =
+                    document.getElementById(map[href]);
+
+                if(targetFrame){
+                    targetFrame.scrollIntoView({
+                        behavior:"smooth",
+                        block:"start"
+                    });
+                }
+
+            });
+
+        }
+
+    });
+
+}
+</script>
+
+</body>
+</html>
