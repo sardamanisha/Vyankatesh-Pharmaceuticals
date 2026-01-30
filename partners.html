@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Partners | Vyankatesh Pharmaceuticals</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f9fdfc;
+  color:#2c3e50;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:3px solid #19b59f;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header img{
+    height:90px;
+  width:125px;
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#2c3e50;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#19b59f;
+}
+
+.emergency{
+  font-weight:600;
+}
+
+/* PAGE TITLE */
+.page-title{
+  background:linear-gradient(to right,#19b59f,#27d3b8);
+  padding:50px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.page-title h1{
+  font-size:36px;
+  font-weight:600;
+}
+
+
+  .page-title h1{
+    font-size:28px;
+  }
+
+  /* PARTNER LOGOS GRID */
+.partners-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    padding: 40px 6%;
+    align-items: center;
+}
+
+/* LOGO BOX */
+.logo-box {
+    background: #ffffff; /* same white */
+    border-radius: 10px;
+    padding: 20px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* LOGO IMAGE */
+.logo-box img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(10%);
+}
+
+/* HOVER EFFECT */
+.logo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.logo-box:hover img {
+    filter: grayscale(0%);
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo1.png" alt="Vyankatesh Pharmaceuticals">
+
+  <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+  <div class="emergency">
+    📞 Emergency<br>
+    9325206654 / 9168066331
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="page-title">
+  <h1>Our Partners</h1>
+</section>
+
+<!-- PARTNERS LOGO SECTION -->
+<section class="section light">
+    <div class="content full">
+
+        <div class="partners-logos">
+
+            <!-- Replace images with your actual partner logos -->
+            <div class="logo-box">
+                <img src="sunpharma.jpeg" alt="Sun Pharma">
+            </div>
+
+            <div class="logo-box">
+                <img src="cipla.jpg" alt="Cipla">
+            </div>
+
+
+            <div class="logo-box">
+                <img src="lupin.png" alt="Lupin">
+            </div>
+
+            <div class="logo-box">
+                <img src="alkem.png" alt="Alkem Laboratories">
+            </div>
+
+            <div class="logo-box">
+                <img src="ajanta.jpeg" alt="Ajanta Pharma">
+            </div>
+
+            <div class="logo-box">
+                <img src="mirva.png" alt="Mirva Biosciences">
+            </div>
+
+             <div class="logo-box">
+                <img src="cadila.png" alt="Cadila Pharmaceuticals Ltd.">
+            </div>
+
+             <div class="logo-box">
+                <img src="intas.png" alt="Intas Pharmaceuticals Ltd.">
+            </div>
+
+            <div class="logo-box">
+                <img src="mankind.jpeg" alt="Mankind Pharma Ltd.">
+            </div>
+
+            <div class="logo-box">
+                <img src="abbott.png" alt="Abott India Ltd.">
+            </div>
+
+            <div class="logo-box">
+                <img src="biocon.jpg" alt="Biocon">
+            </div>
+
+            <div class="logo-box">
+                <img src="elder.jpg" alt="Elder Pharmaceuticals Ltd.">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+  <a href="https://wa.me/919168066331" target="_blank" class="whatsapp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <a href="tel:9325206654" class="call">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Call">
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Vyankatesh Pharmaceuticals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f9fdfc;
+  color:#2c3e50;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:3px solid #19b59f;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header img{
+  height:90px;
+  width:125px;
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#2c3e50;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#19b59f;
+}
+
+.emergency{
+  font-weight:600;
+}
+
+/* PAGE TITLE (SAME AS SERVICES PAGE) */
+.page-title{
+  background:linear-gradient(to right,#19b59f,#27d3b8);
+  padding:50px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.page-title h1{
+  font-size:36px;
+  font-weight:600;
+}
+
+/* ABOUT SECTION */
+.about-section{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:60px 80px;
+  gap:50px;
+}
+
+/* LEFT CONTENT */
+.about-content{
+  width:50%;
+}
+
+.about-content h3{
+  color:#19b59f;
+  font-weight:500;
+  margin-bottom:8px;
+}
+
+.about-content h1{
+  font-size:36px;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.about-content p{
+  font-size:15px;
+  line-height:1.8;
+  color:#555;
+}
+
+/* SLIDESHOW */
+.slideshow{
+  width:50%;
+  position:relative;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.slideshow img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  display:none;
+}
+
+.slideshow img.active{
+  display:block;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .page-title h1{
+    font-size:28px;
+  }
+
+  .about-section{
+    flex-direction:column;
+    padding:40px 20px;
+  }
+
+  .about-content,
+  .slideshow{
+    width:100%;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo1.png" alt="Vyankatesh Pharmaceuticals">
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partners.html">Our Partners</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="emergency">
+   📞 Emergency<br>
+    9325206654 / 9168066331
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="page-title">
+  <h1>About Us</h1>
+</section>
+
+<!-- ABOUT US CONTENT -->
+<section class="about-section">
+
+  <!-- LEFT TEXT -->
+  <div class="about-content">
+    <h3>Who We Are</h3>
+    <h1>Trusted Medical Store for Over 25 Years</h1>
+    <p>
+      Vyankatesh Pharmaceuticals has been serving the community with dedication,
+      trust, and quality healthcare solutions for the last <strong>25 years</strong>.
+      Founded and led by <strong>Mr. Pravin Sarda</strong>, the medical store has earned
+      a strong reputation for reliable medicines and patient-focused service.
+      <br><br>
+      Today, the legacy continues with the involvement of his son,
+      <strong>Mr. Krishna Sarda</strong>, bringing modern practices while preserving
+      the values of honesty, care, and commitment.
+      <br><br>
+      We ensure availability of genuine medicines, proper storage,
+      and dependable service for every customer.
+    </p>
+  </div>
+
+  <!-- RIGHT SLIDESHOW -->
+  <div class="slideshow">
+    <img src="image1.png" class="active">
+    <img src="image2.png">
+    <img src="image3.png">
+    <img src="image4.png">
+    <img src="image5.png">
+  </div>
+
+</section>
+
+<!-- SLIDESHOW SCRIPT -->
+<script>
+let slides = document.querySelectorAll('.slideshow img');
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 2000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Vyankatesh Pharmaceuticals</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f9fdfc;
+  color:#2c3e50;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:3px solid #19b59f;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header img{
+    height:90px;
+  width:125px;
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#2c3e50;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#19b59f;
+}
+
+.emergency{
+  font-weight:600;
+}
+
+/* PAGE TITLE */
+.page-title{
+  background:linear-gradient(to right,#19b59f,#27d3b8);
+  padding:50px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.page-title h1{
+  font-size:36px;
+  font-weight:600;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  display:flex;
+  gap:40px;
+  padding:60px 80px;
+}
+
+/* LEFT INFO */
+.contact-info{
+  width:45%;
+}
+
+.contact-info h3{
+  color:#19b59f;
+  margin-bottom:15px;
+}
+
+.contact-info p{
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:12px;
+}
+
+/* MAP BUTTON */
+.map-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#19b59f;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.map-btn:hover{
+  background:#139a86;
+}
+
+/* FORM */
+.contact-form{
+  width:55%;
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-form h3{
+  color:#19b59f;
+  margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.contact-form textarea{
+  height:120px;
+  resize:none;
+}
+
+.contact-form button{
+  background:#19b59f;
+  color:#fff;
+  padding:12px 25px;
+  border:none;
+  border-radius:6px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  background:#139a86;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .contact-section{
+    flex-direction:column;
+    padding:40px 20px;
+  }
+
+  .contact-info,
+  .contact-form{
+    width:100%;
+  }
+}
+
+/* FOOTER */
+.site-footer {
+    background: #007f7a; /* similar teal shade as example */
+    color: #ffffff;
+    padding-top: 60px;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding: 0 8% 50px;
+}
+
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    line-height: 1.8;
+    color: #eafafa;
+}
+
+/* LINKS */
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #eafafa;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT */
+.footer-contact p {
+    margin-bottom: 12px;
+    color: #eafafa;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #10b7b0;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #0da19b;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    font-size: 14px;
+    color: #eafafa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social a {
+        margin: 8px;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo1.png" alt="Vyankatesh Pharmaceuticals">
+
+  <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+  <div class="emergency">
+   📞 Emergency<br>
+    9325206654 / 9168066331
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="page-title">
+  <h1>Contact Us</h1>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
+  <!-- LEFT DETAILS -->
+  <div class="contact-info">
+    <h3>Get in Touch</h3>
+
+    <p>
+      <strong>Vyankatesh Pharmaceuticals</strong><br>
+      Nakoda Apartment, Basement Floor,<br>
+      Opp. Gulzar Cinema, Keli Bazar,<br>
+      Aurangabad – 431001
+    </p>
+
+    <p>
+      <strong>Phone:</strong><br>
+      9168066331<br>
+      9325206652
+    </p>
+
+    <a class="map-btn"
+      href="https://www.google.com/maps/search/?api=1&query=Gulzar+Cinema+Keli+Bazar+Aurangabad"
+      target="_blank">
+      View on Google Maps
+    </a>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="contact-form">
+    <h3>Send Message on WhatsApp</h3>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Contact Number" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send via WhatsApp</button>
+      
+    </form>
+  </div>
+
+</section>
+
+<!-- WHATSAPP SCRIPT -->
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  let text =
+    "New Enquiry from Vyankatesh Pharmaceuticals Website%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Message: " + message;
+
+  // Primary WhatsApp number
+  let whatsappNumber = "9168066331";
+
+  let url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+  window.open(url, "_blank");
+}
+</script>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+  <a href="https://wa.me/919168066331" target="_blank" class="whatsapp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <a href="tel:9325206654" class="call">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Call">
+  </a>
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- LEFT: ABOUT -->
+        <div class="footer-about">
+            <img src="logo1.png" alt="Vyankatesh Pharmaceuticals" class="footer-logo">
+            <p>
+                Vyankatesh Pharmaceuticals is committed to delivering
+                high-quality pharmaceutical products with a focus on
+                trust, innovation, and patient well-being. We aim to
+                support healthcare through ethical and reliable solutions.
+            </p>
+        </div>
+
+        <!-- MIDDLE: COMPANY LINKS -->
+        <div class="footer-links">
+           <!---- <h3>Our Company</h3> -->
+            <ul>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+                <li><a href="index.html#contact">Let's Connect</a></li>
+            </ul>
+        </div>
+
+        <!-- RIGHT: CONTACT -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+      <strong>📍 Vyankatesh Pharmaceuticals</strong><br>
+      Nakoda Apartment, Basement Floor,<br>
+      Opp. Gulzar Cinema, Keli Bazar,<br>
+      Aurangabad – 431001
+    </p>
+            <p>📧 sardapravin02@gmail.com</p>
+            
+            <p>📞 9325206654 / 9168066331 </p>
+
+            
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Vyankatesh Pharmaceuticals. All Rights Reserved.
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Vyankatesh Pharmaceuticals</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f9fdfc;
+  color:#2c3e50;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:3px solid #19b59f;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header img{
+    height:90px;
+  width:125px;
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#2c3e50;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#19b59f;
+}
+
+.emergency{
+  font-weight:600;
+}
+
+/* PAGE TITLE */
+.page-title{
+  background:linear-gradient(to right,#19b59f,#27d3b8);
+  padding:50px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.page-title h1{
+  font-size:36px;
+  font-weight:600;
+}
+
+/* FAQ SECTION */
+.faq-section{
+  max-width:900px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+.faq-section h3{
+  text-align:center;
+  color:#19b59f;
+  margin-bottom:30px;
+}
+
+/* FAQ ITEM */
+.faq-item{
+  background:#fff;
+  border-radius:8px;
+  margin-bottom:15px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+
+.faq-question{
+  padding:18px 20px;
+  cursor:pointer;
+  font-weight:500;
+  position:relative;
+}
+
+.faq-question::after{
+  content:"+";
+  position:absolute;
+  right:20px;
+  font-size:22px;
+  color:#19b59f;
+}
+
+.faq-item.active .faq-question::after{
+  content:"–";
+}
+
+.faq-answer{
+  display:none;
+  padding:0 20px 20px;
+  font-size:14px;
+  line-height:1.8;
+  color:#555;
+}
+
+.faq-item.active .faq-answer{
+  display:block;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .page-title h1{
+    font-size:28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo1.png" alt="Vyankatesh Pharmaceuticals">
+
+ <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+  <div class="emergency">
+    📞 Emergency<br>
+    9325206654 / 9168066331
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="page-title">
+  <h1>Frequently Asked Questions</h1>
+</section>
+
+<!-- FAQ CONTENT -->
+<section class="faq-section">
+  <h3>Your Questions, Answered</h3>
+
+  <div class="faq-item">
+    <div class="faq-question">Do you provide genuine and branded medicines?</div>
+    <div class="faq-answer">
+      Yes. At Vyankatesh Pharmaceuticals, we ensure that all medicines are sourced
+      only from authorized distributors and manufacturers, guaranteeing quality
+      and authenticity.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How long has Vyankatesh Pharmaceuticals been in service?</div>
+    <div class="faq-answer">
+      The medical store has been serving customers for over 25 years under the
+      guidance of Mr. Pravin Sarda, with continued commitment to trust and care.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I get prescription medicines here?</div>
+    <div class="faq-answer">
+      Yes, prescription medicines are provided strictly against a valid doctor’s
+      prescription, as per medical guidelines.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Do you stock surgical and medical equipment?</div>
+    <div class="faq-answer">
+      Yes, we offer a range of surgical items and medical supplies depending on
+      availability. You can contact us for specific requirements.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Do you offer guidance on medicine usage?</div>
+    <div class="faq-answer">
+      Yes. Our experienced staff provides basic guidance on dosage, storage, and
+      usage as mentioned by the prescribing doctor.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Where is your medical store located?</div>
+    <div class="faq-answer">
+      We are located at Nakoda Apartment, Basement Floor, Opp. Gulzar Cinema,
+      Keli Bazar, Aurangabad – 431001.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How can I contact you quickly?</div>
+    <div class="faq-answer">
+      You can call or WhatsApp us on 9168066331 or 9325206654 for quick assistance
+      regarding medicine availability.
+    </div>
+  </div>
+
+</section>
+
+<!-- FAQ SCRIPT -->
+<script>
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+</script>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+  <a href="https://wa.me/919168066331" target="_blank" class="whatsapp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <a href="tel:9325206654" class="call">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Call">
+  </a>
+</div>
+
+</body>
+</html>
